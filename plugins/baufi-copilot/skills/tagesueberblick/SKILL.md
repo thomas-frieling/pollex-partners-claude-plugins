@@ -24,7 +24,8 @@ Aufgabe: die letzten Ereignisse über alle Konten des angemeldeten Beraters kurz
 2. Ereignisse nur aus dem Tooltext. Er ist bereits nach Wichtigkeit sortiert. Klassifikation, Kategorien und Wichtigkeit kommen vom Server. Übernimm sie, bewerte sie nicht neu.
 3. Mails nur, wenn in Claude ein Mail-Connector verbunden ist (zum Beispiel Microsoft 365 oder Gmail). Dann im Postfach lesen, im selben Zeitraum wie die Zeile „Seit:“ im Tooltext. Suche nach Mails zu Finanzierung: Banken, Kunden, Unterlagen, Rückfragen, Zusagen, Fristen. Newsletter, Werbung und Mails ohne diesen Bezug weglassen.
 4. Ist kein Mail-Connector verbunden, keine Mail-Suche starten. Den Mail-Teil weglassen und in einem Satz sagen, dass Mails nicht geprüft wurden.
-5. Ordne jede gefundene Mail einem Vorgang aus dem Tooltext zu. Es zählen Kundenname (auch die gekürzte Form aus dem Tool gegen den vollen Namen in der Mail), Inhalt von Betreff und Text, Vorgangsnummer und Antragsnummer. Die Absenderadresse allein reicht nicht. Passt nichts, die Mail keinem Vorgang zuschreiben.
+5. Ordne jede gefundene Mail einem Vorgang aus dem Tooltext zu. Es zählen Kundenname, Inhalt von Betreff und Text, Vorgangsnummer und Antragsnummer. Die Absenderadresse allein reicht nicht. Passt nichts, die Mail keinem Vorgang zuschreiben.
+6. Will der Berater den vollständigen Verlauf eines einzelnen Vorgangs, `get_case_events` mit `vorgang` aufrufen (Nummer oder Name). Meldungen in `list_recent_events` sind gekürzt.
 
 ## Antwort
 
@@ -46,7 +47,7 @@ Mails ohne passenden Vorgang stehen im passenden Block ganz unten, jede als eine
 - Nur lesen. Keine Mail senden, antworten, weiterleiten, verschieben, löschen oder als gelesen markieren. Nichts in Europace anlegen oder ändern, keinen Antrag auslösen.
 - `TEST_MODUS` nur, wenn der Berater ausdrücklich Testdaten oder den Testmodus verlangt. Sonst immer `ECHT_GESCHAEFT`.
 - Nichts erfinden. Namen, Banken, Zeiten und Meldungen nur aus dem Tooltext, Mail-Angaben nur aus der gelesenen Mail. Ist ein Feld leer oder „—“, sag dass die Angabe fehlt.
-- Kundennamen so lassen, wie der Server sie liefert (gekürzte Form). Nicht zum vollen Namen ergänzen.
+- Kundennamen so lassen, wie der Server sie liefert.
 - Kommt ein Fehlertext zurück, nicht erneut aufrufen. Sag in einem Satz, was der Berater tun kann:
   - „Zu viele Abfragen. Bitte eine Minute warten.“ → eine Minute warten, nicht selbst wiederholen.
   - „Konto nicht gefunden.“ → nach der Kontenbezeichnung fragen. Konten nennt `get_profile`.
