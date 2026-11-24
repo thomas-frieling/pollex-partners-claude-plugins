@@ -38,6 +38,7 @@ Ursache anhand des Profiltexts, in dieser Reihenfolge. Kommt das Tool mit `isErr
 - Nichts versenden, nichts in Europace anlegen oder ändern, keine E-Mail und keinen Antrag auslösen.
 - `TEST_MODUS` nur, wenn der Berater ausdrücklich Testdaten oder den Testmodus verlangt. Sonst immer `ECHT_GESCHAEFT`. Konten aus dem Profil gelten für beide Datenkontexte. Erfinde keine Testdaten.
 - Nichts erfinden. Nur den Text von `get_profile`: Name, E-Mail, Status, Rollen, rechtliche Zustimmung, Abrechnungskonto, Europace-Konten mit Schlüssel. Ist eine Angabe leer, sag dass sie fehlt.
+- Fragt der Berater nach der Version, die Zeile `Server-Version` unverändert wiedergeben.
 - Kundennamen und Kontenbezeichnungen so lassen, wie der Server sie liefert.
 - Kommt „Nicht angemeldet.“ oder ein Verbindungsfehler, nicht erneut aufrufen. Sag, dass der Berater die Verbindung zum Baufi Copilot in Claude neu anmelden muss.
 - Kommt bei einem anderen Skill „Scope cases:read fehlt.“, „Zu viele Abfragen. Bitte eine Minute warten.“, „Konto nicht gefunden.“ oder „Dieses Tool steht nur Finanzierungsmaklern zur Verfügung.“, dieselbe Handlungsempfehlung geben und den Aufruf nicht wiederholen.
