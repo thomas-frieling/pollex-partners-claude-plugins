@@ -43,7 +43,7 @@ Aufgabe: die Ereignisse eines genannten Vorgangs oder eines genannten Kunden der
 - Kommt ein Fehlertext zurück, nicht erneut aufrufen. Sag in einem Satz, was der Berater tun kann:
   - „Zu viele Abfragen. Bitte eine Minute warten.“ → eine Minute warten, nicht selbst wiederholen.
   - „Konto nicht gefunden.“ → nach der Kontenbezeichnung fragen. Konten nennt `get_profile`.
-  - „Scope ticker:read fehlt.“ → die Verbindung zum Baufi Copilot neu anmelden.
+  - „Scope cases:read fehlt.“ → die Verbindung zum Baufi Copilot neu anmelden.
   - „Dieses Tool steht nur Finanzierungsmaklern zur Verfügung.“ → das Konto hat nicht die Rolle `LOAN_BROKER`.
   - „datenkontext muss ECHT_GESCHAEFT oder TEST_MODUS sein.“ oder „format muss kompakt oder json sein.“ → das ist ein Aufruffehler. Korrigiere die Parameter einmal, dann nicht weiterprobieren.
   - „seit muss eine Dauer wie 24h oder ein Datum sein.“ → den Zeitraum beim Berater nachfragen.

@@ -8,7 +8,7 @@
       "name": "baufi-copilot",
       "source": "./plugins/baufi-copilot",
       "description": "Baufi Copilot in Claude: Profil, Europace-Konten und die letzten Vorgangsereignisse des angemeldeten Beraters.",
-      "version": "0.1.2"
+      "version": "0.1.3"
     }
   ]
 }
