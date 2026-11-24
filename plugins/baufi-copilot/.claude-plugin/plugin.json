@@ -1,7 +1,7 @@
 {
   "name": "baufi-copilot",
   "description": "Baufi Copilot in Claude: Profil, Europace-Konten und die letzten Vorgangsereignisse des angemeldeten Beraters.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": {
     "name": "Pollex Partners"
   }
