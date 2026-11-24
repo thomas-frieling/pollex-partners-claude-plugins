@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "baufi-copilot": {
+      "type": "http",
+      "url": "https://mcp.app.pollex-partners.de/mcp"
+    }
+  }
+}
