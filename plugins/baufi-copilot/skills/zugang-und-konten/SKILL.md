@@ -29,16 +29,18 @@ Ursache anhand des Profiltexts, in dieser Reihenfolge. Kommt das Tool mit `isErr
 
 ## Antwort
 
-- Zuerst der Name und die E-Mail, dann der Status, dann die Kontenliste.
+`get_profile` zeigt Name, E-Mail, Status, die Europace-Konten und die Server-Version. Danach dieselben Angaben kurz als Text, die Liste nicht ausschmücken. Fehlt die Ansicht, ist dieser Text die ganze Antwort.
+
+- Zuerst der Name und die E-Mail, dann der Status, dann die Kontenliste, dann die Zeile `Server-Version` unverändert.
 - Kurz: höchstens ein kurzer Absatz plus eine Liste. Kein Rollen-Vortrag, wenn der Berater nur die Konten wollte.
 - Fehlt die Zeile `Abrechnungskonto`, den Abrechnungskonten-Namen weglassen.
+- Die Zeile `Server-Version` immer nennen, auch wenn der Berater nicht danach fragt.
 
 ## Regeln
 
 - Nichts versenden, nichts in Europace anlegen oder ändern, keine E-Mail und keinen Antrag auslösen.
 - `TEST_MODUS` nur, wenn der Berater ausdrücklich Testdaten oder den Testmodus verlangt. Sonst immer `ECHT_GESCHAEFT`. Konten aus dem Profil gelten für beide Datenkontexte. Erfinde keine Testdaten.
-- Nichts erfinden. Nur den Text von `get_profile`: Name, E-Mail, Status, Rollen, rechtliche Zustimmung, Abrechnungskonto, Europace-Konten mit Schlüssel. Ist eine Angabe leer, sag dass sie fehlt.
-- Fragt der Berater nach der Version, die Zeile `Server-Version` unverändert wiedergeben.
+- Nichts erfinden. Nur den Text von `get_profile`: Name, E-Mail, Status, Rollen, rechtliche Zustimmung, Abrechnungskonto, Europace-Konten mit Schlüssel, und die Zeile Server-Version. Ist eine Angabe leer, sag dass sie fehlt.
 - Kundennamen und Kontenbezeichnungen so lassen, wie der Server sie liefert.
 - Kommt „Nicht angemeldet.“ oder ein Verbindungsfehler, nicht erneut aufrufen. Sag, dass der Berater die Verbindung zum Baufi Copilot in Claude neu anmelden muss.
 - Kommt bei einem anderen Skill „Scope cases:read fehlt.“, „Zu viele Abfragen. Bitte eine Minute warten.“, „Konto nicht gefunden.“ oder „Dieses Tool steht nur Finanzierungsmaklern zur Verfügung.“, dieselbe Handlungsempfehlung geben und den Aufruf nicht wiederholen.
